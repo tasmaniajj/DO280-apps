@@ -1,0 +1,17 @@
+env:
+  - name: MONGO_AUTH_USER
+    valueFrom:
+      secretKeyRef:
+        key: database-user
+        name: mongo
+  - name: MONGO_AUTH_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        key: database-password
+        name: mongo
+  - name: MONGO_DATABASE
+    valueFrom:
+      secretKeyRef:
+        key: database-admin-password
+        name: mongo
+
